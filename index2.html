@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virage Bento Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white dark:bg-white dark:text-black transition-colors duration-300">
+
+<div class="max-w-[1024px] mx-auto p-4 grid grid-cols-6 grid-rows-4 gap-4 auto-rows-[160px]">
+
+ <!-- Cycling Tile with Local Background Image and Text Overlay -->
+<div class="col-span-3 row-span-2 bg-cover bg-center rounded-2xl overflow-hidden relative"
+     style="background-image: url('./assets/img2.jpg');">
+
+  <!-- Optional dark overlay for text visibility -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Text at bottom using Disclaimer font -->
+  <div class="absolute bottom-0 left-0 w-full p-4 z-10">
+    <h2 class="text-white text-2xl font-bold leading-tight" style="font-family: 'Disclaimer Classic', sans-serif;">
+      I'M DEEPAK MOHAN
+    </h2>
+    <p class="text-white text-sm mt-1" style="font-family: 'Disclaimer Classic', sans-serif;">
+      Creative and Lateral Approach to Designing
+    </p>
+  </div>
+</div>
+
+
+
+  
+  <!-- virage.ai tile with looping video background and overlay text, clickable -->
+<a href="your-target-page.html" class="col-span-2 row-span-1 rounded-2xl overflow-hidden relative group cursor-pointer block">
+  <!-- Background video -->
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="./assets/video1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional dark overlay for readability -->
+  <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300"></div>
+
+  <!-- Overlay text -->
+  <div class="relative z-10 flex items-center justify-center w-full h-full">
+    <h2 class="text-white text-2xl font-bold tracking-wide" style="font-family: 'Antonio', sans-serif;">
+  PROJECTS
+</h2>
+
+
+  </div>
+</a>
+
+
+  <!-- Lucide icons instead of emojis -->
+  <div class="col-span-1 row-span-1 bg-gray-100 dark:bg-gray-200 text-black rounded-2xl flex flex-col items-center justify-center space-y-2">
+    <i data-lucide="bike" class="w-6 h-6"></i>
+    <i data-lucide="navigation" class="w-6 h-6"></i>
+    <i data-lucide="mountain" class="w-6 h-6"></i>
+    <i data-lucide="trending-up" class="w-6 h-6"></i>
+  </div>
+
+  <div class="col-span-1 row-span-1 bg-gray-100 dark:bg-gray-200 text-black rounded-2xl flex items-center justify-center overflow-hidden">
+  <img src="./assets/img1.jpg" alt="My Image" class="object-cover w-full h-full rounded-2xl" />
+</div>
+
+
+  
+
+ <!-- Redesigned Real-time Clock Tile -->
+<div class="col-span-2 row-span-1 bg-white dark:bg-black text-black dark:text-white rounded-2xl p-5 flex flex-col justify-between shadow relative overflow-hidden">
+
+  <!-- Top: Date & Icon -->
+  <div class="flex items-center justify-between">
+    
+    <!-- Date block -->
+    <div class="flex flex-col items-center justify-center bg-[#0D0D46] text-white px-4 py-2 rounded-xl">
+      <div id="weekday" class="text-sm font-medium">Sat</div>
+      <div id="date" class="text-lg font-bold -mt-1">09</div>
+    </div>
+
+    <!-- Clock icon in circle -->
+    <div class="w-12 h-12 rounded-full bg-[#0D0D46] flex items-center justify-center shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Bottom: Time Display -->
+  <div id="live-time" class="mt-4 text-center text-3xl font-bold bg-[#FF5F45] text-black dark:text-white py-2 rounded-xl shadow-inner tracking-widest">
+    --:--:--
+  </div>
+
+</div>
+
+
+ <!-- route graph - About Me with background video and overlay text -->
+<div class="col-span-3 row-span-1 rounded-2xl overflow-hidden relative">
+
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline class="absolute w-full h-full object-cover">
+    <source src="./assets/video2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional dark overlay -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Text Content Overlay -->
+  <div class="absolute inset-0 z-10 p-4 flex flex-col justify-between text-white">
+    <div class="flex justify-between items-center">
+      <h3 class="font-bold text-lg">About me</h3>
+    </div>
+    <div class="text-2xl font-bold leading-snug">
+      Passionate About UI/UX Love to Design Beautiful and Responsive Websites.Blending creativity for better designs
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Project Inquiry Tile (Black & White) -->
+<div class="col-span-2 row-span-1 bg-white dark:bg-black text-black dark:text-white rounded-2xl p-4 flex flex-col justify-center items-start space-y-2 shadow relative">
+
+  <!-- Message -->
+  <h2 class="text-lg font-bold">Have a project in mind?</h2>
+  <p class="text-sm">Let’s do it.</p>
+
+  <!-- Copy button with hidden email -->
+  <div class="flex items-center space-x-2 mt-2">
+    <button onclick="copyEmail()" class="flex items-center px-3 py-1 text-sm border border-black dark:border-white rounded-md hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8l6 6v8a2 2 0 01-2 2h-2"/>
+      </svg>
+      Copy Email
+    </button>
+  </div>
+
+  <!-- Hidden email field -->
+  <input type="text" value="your.email@gmail.com" id="hidden-email" readonly class="absolute opacity-0 pointer-events-none" />
+
+</div>
+
+
+  <div class="col-span-1 row-span-1 bg-gray-100 dark:bg-gray-200 text-black rounded-2xl flex items-center justify-center overflow-hidden"></div>
+   
+  <!-- Email subscription tile -->
+  <div class="col-span-3 row-span-1 bg-white dark:bg-gray-100 text-black rounded-2xl flex items-center justify-between px-6 py-4">
+    <div class="w-full">
+      <h2 class="text-xl font-bold leading-tight">Get my new designs and updates in your inbox — <span class="text-indigo-500">for free</span></h2>
+      <form class="mt-4 flex w-full max-w-md">
+        <input type="email" placeholder="Enter your email" class="flex-grow rounded-l-lg px-4 py-2 border border-gray-300 focus:outline-none" required>
+        <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Theme toggle tile fallback button with animation -->
+<div class="col-span-1 row-span-1 bg-gray-700 dark:bg-gray-300 text-white dark:text-black rounded-2xl flex items-center justify-center transition-transform duration-500 hover:scale-105 hover:rotate-1 shadow-lg">
+  <button onclick="toggleTheme()" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-300 dark:hover:bg-indigo-400 transition duration-500">
+    Toggle Theme
+  </button>
+</div>
+
+<div class="col-span-2 row-span-1 bg-white dark:bg-gray-100 rounded-2xl flex items-center justify-center">
+   <img src="./assets/img5.jpg" alt="My Image" class="object-cover w-full h-full rounded-2xl" />
+  </div>
+
+</div>
+
+<div class="col-span-3 row-span-2 rounded-2xl overflow-hidden relative" data-tilt data-tilt-max="15" data-tilt-speed="400">
+  mm
+</div>
+
+
+
+</div>
+
+<script>
+  lucide.createIcons();
+
+  function toggleTheme() {
+    document.documentElement.classList.toggle('dark');
+  }
+
+  function updateTimeIST() {
+    const now = new Date();
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      weekday: 'short'
+    };
+
+    const timeString = now.toLocaleTimeString('en-IN', options);
+    const weekday = now.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', weekday: 'short' });
+    const date = now.toLocaleDateString('en-IN', { timeZone: 'Asia/Kolkata', day: '2-digit' });
+
+    document.getElementById('live-time').textContent = timeString;
+    document.getElementById('weekday').textContent = weekday;
+    document.getElementById('date').textContent = date;
+  }
+
+  setInterval(updateTimeIST, 1000);
+  updateTimeIST();
+
+
+  function copyEmail() {
+    const emailField = document.getElementById("hidden-email");
+    emailField.select();
+    emailField.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(emailField.value);
+  }
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+
+</body>
+</html>
+
